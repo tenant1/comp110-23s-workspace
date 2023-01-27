@@ -2,13 +2,13 @@
 
 __author__ = "730489449"
 
-term: str = input("Enter a 5-letter word:")
+term: str = input("Enter a 5-character word:")
 if len(term) != 5: 
-    print("Error: Word must contain 5 letters")
+    print("Error: Word must contain 5 characters")
     exit()
 letter: str = input("Enter a single letter:")
-if len(letter) > 1:
-    print("Error: Letter must be a single letter.")
+if len(letter) != 1:
+    print("Error: Character must be a single character.")
     exit()
 matching_indices: int = 0
 print("Searching for" + letter + "in" + term)
