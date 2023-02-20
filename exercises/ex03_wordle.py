@@ -1,6 +1,6 @@
 """EX03 - Structured Wordle"""
 
-__author__ = 730489449
+__author__ = "730489449"
 
 """
 The purpose of this function is when given two strings, the 
@@ -20,7 +20,7 @@ return True if the single character of the second string is
  or False if character is not contained in string 
 """
 # define a function named contains_char
-def contains_char(word, character):
+def contains_char(word: str, character: str) -> bool: 
     assert len(character) == 1
  # assert the assumptions that if an error will raise if found not to be true 
     length = len(word)
@@ -43,7 +43,7 @@ secret: string representing secret word
 Returns: string of emojis in coding user's guess
 """
 # declare a function named emojified 
-def emojified(guess, secret):
+def emojified(guess: str, secret: str) -> str:
     assert len(guess) == len(secret)
     # use this assertion since anyone using this function will provide strings of equal length
     # reuse the named constants you setup in EX03 for the colored emoji boxes
@@ -80,7 +80,7 @@ expected_length: integer expected length of a guess
 Returns: guess of appropriate length 
 """
 # define a function named input_guess
-def input_guess(expected_length):
+def input_guess(expected_length: int) -> str:
     # prompt user to input guess
     term: str = input(f"Enter a {expected_length} character word: ")
     continued = True
