@@ -89,6 +89,9 @@ def input_guess(expected_length: int) -> str:
             term = input(f"That wasn't {expected_length} chars! Try again: ")
         else: 
             return term
+    
+    return term
+
 """
  the purpose of the main function is to establish what 
  the secret word is as a variable 
