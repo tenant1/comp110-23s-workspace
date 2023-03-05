@@ -13,7 +13,6 @@ def max(nums: list[int]) -> int:
     
     result: int = nums[0]
 
-
     for num in nums: 
         if num > result: 
             result = num 
