@@ -3,22 +3,19 @@
 __author__ = "730489449"
 
 import random
-points: int
-player: str
-heart_eyes: str
+points: int = 0
+player: str = ""
+heart_eyes: str = "\U0001F60D"
 def main(): 
     """Define a main function, that returns None, and follows the 
     Python idiom for calling main at the end of the program based 
     on the dunderscore variable __name__ being equal to "__main__".
     """
-    global points, player, heart_eyes 
-    points = 0
-    player = ""
-    heart_eyes = "\U0001F60D"
     greet()
+    global points
     while True:
         print("Type one or two for a quiz and three to quit")
-        choice = input("What would you like to do?")
+        choice: str = input("What would you like to do?")
         if choice == "1":
             procedure_1()
         elif choice == "2":
