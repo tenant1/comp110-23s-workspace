@@ -8,12 +8,8 @@ player: str = ""
 heart_eyes: str = "\U0001F60D"
 
 
-def main(): 
-    """
-    Define a main function, that returns None, and follows the 
-    Python idiom for calling main at the end of the program based 
-    on the dunderscore variable __name__ being equal to "__main__".
-    """
+def main() -> None: 
+    """Define a main function, that returns None, and follows the Python idiom for calling main at the end of the program based on the underscore variable __name__ being equal to "__main__"."""
     greet()
     global points
     while True:
@@ -31,24 +27,17 @@ def main():
 
 
 def greet() -> None:
-    """
-    The greet function must print a welcome message to give some context to your 
-    game and asks the player for their name. 
-    """
-
+    """The greet function must print a welcome message to give some context to your game and asks the player for their name."""
     global player 
     print(f"Hello! {heart_eyes}")
     player = input("What is your name?")
 
 
 def procedure_1() -> None:
-    """
-    The procedure should lead to textual interaction(s) that make use of players 
-    name and ask the player for additional input.
-    """
-    global player, points
-    character = input(f"What Harry Potter character are you, {player}?")
-    multiplier = random.randint(1,3)
+    """The procedure should lead to textual interaction(s) that make use of players name and ask the player for additional input."""
+    global points
+    character: str = input(f"What Harry Potter character are you, {player}?")
+    multiplier: int = random.randint(1, 3)
     if character == "Harry": 
         points += 3 * multiplier
     elif character == "Hermione":
@@ -62,13 +51,8 @@ def procedure_1() -> None:
 
 
 def procedure_2(number: int) -> int: 
-    """
-    The function takes at least one int as a parameter and returns an int. The call 
-    to this function from main should pass the player’s points value as an argument to 
-    the function call
-    """
-    global player 
-    character = input(f"Pick a number 1-5, {player}.")
+    """The function takes at least one int as a parameter and returns an int. The call to this function from main should pass the player’s points value as an argument to the function call."""
+    character: str = input(f"Pick a number 1-5, {player}.")
     if character == "1":
         return number + 1 
     elif character == "2":
