@@ -17,7 +17,7 @@ def column_vals(table: list[dict[str,str]], header: str) -> list[str]:
     for row in table:
         #save every value under key "header"
         result.append(row[header])
-        return result
+    return result
     
 def columnar(table: list[dict[str,str]]) -> dict[str,list[str]]: 
     """Reformats data so that it's a dictionary with column header"""
